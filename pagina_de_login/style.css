@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #8D75EB;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+
+    position: relative;
+}
+
+#login {
+    background-color: white;
+    border-radius: 20px;
+    height: 600px;
+    width: 600px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#login > #formulario {
+    display: block;
+    padding: 10px;
+}
+
+#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+#formulario > p {
+   font-size: 1.5em;
+}
+
+.campo {
+    background-color: #7583EB;
+    border: 2px solid #7583EB;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    height: 60px;
+    margin: 5px 0px;
+}
+
+.campo > label {
+    display: none;
+}
+
+.campo > span {
+    font-size: 2em;
+    color: white;
+    width: 40px;
+    padding: 5px;
+}
+
+.campo > input {
+    font-size: 1.5em;
+    width: calc(92% + 1.8px);
+    height: 100%;
+    border: 0px;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1.5em;
+    width: 100%;
+    height: 60px;
+    background-color: #B476EB;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #EB75C2;
+}
+
+
+form > .botao {
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    padding-top: 12px;
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid #EB75C2;
+    border-radius: 10px;
+    color: #EB75C2;
+    text-decoration: none;
+
+}
+
+form > .botao:hover {
+    color: white;
+    background-color: #EB75C2;
+}
