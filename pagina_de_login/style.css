@@ -117,3 +117,18 @@ form > .botao:hover {
     color: white;
     background-color: #EB75C2;
 }
+
+#login > p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#login > p > a {
+    text-decoration: none;
+    color: #EB75C2;
+}
+
+#login > p > a:hover {
+    text-decoration: underline;
+}
