@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./pagina_de_login/style.css">
+    <link rel="stylesheet" href="/pagina_de_cadastro/estilo_cadastro.css">
     <title>Bem vindo!</title>
 </head>
 <body>
@@ -15,9 +15,9 @@
 
             <div id="formulario">
 
-                <h1>Login</h1>
+                <h1>Criar</h1>
 
-                <p>Seja bem vindo(a) ao nosso curso! Faça o login para acessar sua conta.</p>
+                <p>Seja bem vindo(a) ao nosso curso! Crie sua conta aqui.</p>
 
                 <form action="" method="post" autocomplete="on">
                     <div class="campo">
@@ -28,16 +28,22 @@
 
                     <div class="campo">
                         <span class="material-symbols-outlined">person</span>
-                        <input type="password" name="senha" id="isenha" autocapitalize="current-password" placeholder="Digite sua senha" required minlength="8" maxlength="20">
-                        <label for="isenha">Senha: </label>
+                        <input type="password" name="senha" id="icriesenha" autocapitalize="current-password" placeholder="Crie sua senha" required minlength="8" maxlength="20">
+                        <label for="icriesenha">Crie sua senha: </label>
                     </div>
-                    <input type="submit" value="Entrar">
-                    <a href="esqueci.html" class="botao">Esqueci minha senha</a>
+
+                    <div class="campo">
+                        <span class="material-symbols-outlined">person</span>
+                        <input type="password" name="senha" id="iconsenha" autocapitalize="current-password" placeholder="Confime sua senha" required minlength="8" maxlength="20">
+                        <label for="iconsenha">Confirme sua senha </label>
+                    </div>
+                    <input type="submit" value="Criar conta">
+
                 </form>
 
             </div>
             
-            <p>Novo na plataforma? <a href="/pagina_de_cadastro/cadastro.html">Crie uma conta</a></p>
+            <p>Já tem uma conta na plataforma? <a href="../index.html">Entre na sua conta</a></p>
 
         </section>
 
