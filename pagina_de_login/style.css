@@ -32,7 +32,6 @@ main {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 #login > #formulario {
@@ -48,13 +47,14 @@ main {
 
 #formulario > p {
    font-size: 1.5em;
+   margin-bottom: 20px;
 }
 
 .campo {
     background-color: #7583EB;
     border: 2px solid #7583EB;
     border-radius: 10px;
-    display: block;
+    display: flex;
     width: 100%;
     height: 60px;
     margin: 5px 0px;
@@ -69,11 +69,14 @@ main {
     color: white;
     width: 40px;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .campo > input {
     font-size: 1.5em;
-    width: calc(92% + 1.8px);
+    width: calc(92% + 13px);
     height: 100%;
     border: 0px;
     border-radius: 10px;
