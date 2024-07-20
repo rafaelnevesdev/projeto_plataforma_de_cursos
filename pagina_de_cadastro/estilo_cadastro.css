@@ -32,6 +32,9 @@ main {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    
+    transition: width .3s, heigth .3s;
+    transition-timing-function: ease;
 }
 
 #login > #formulario {
@@ -41,6 +44,7 @@ main {
 
 #formulario > h1 {
     text-align: center;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-size: 1.5em;
 }
