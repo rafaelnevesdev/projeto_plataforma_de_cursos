@@ -9,11 +9,12 @@
 }
 
 html, body {
-    background-color: #8D75EB;
+    background-color: white;
 }
 
 header {
-    background-color: #8D75EB;
+    background-image: linear-gradient(to left, #DA75EB, #7583EB);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
 }
 
 header > h1 {
@@ -26,7 +27,6 @@ span#icone {
     font-size: 2em;
     display: block;
     text-align: center;
-    background-color: #8D75EB;
     color: white;
     padding: 5px;
     cursor: pointer;
@@ -34,14 +34,15 @@ span#icone {
 
 
 menu {
-    display: none;
-    border-radius: 10px;
+    display: none; 
     background-color: white;
     padding: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
 }
 
 menu > ul {
     list-style-type: none;
+    
 }
 
 menu > ul > li > a {
@@ -56,6 +57,7 @@ menu > ul > li > a {
 
 a.borda_cima{
     border-radius: 10px 10px 0px 0px;
+    border-top: 0px;
 }
 
 a.borda_baixo{
@@ -66,7 +68,7 @@ menu > ul > li > a:hover {
     background-color: #EB75C2;
 }
 
-main {
+.caixa {
     background-color: white;
     width: 95vw;
     margin: auto;
@@ -76,11 +78,39 @@ main {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
 }
 
-aside#mensagens > h2 {
-    padding-bottom: 20px;
+article#cursos {
+    height: 500px;
+    background-color: #EB75C2;
+    box-shadow: 0px 0px 0px;
 }
 
-aside#mensagens > p {
+article#cursos > h2 {
+    text-align: center;
+}
+
+main.caixa {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+    height: 95vh;
+}
+
+
+aside.caixa {
+
+}
+
+aside.caixa > h2 {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+aside.caixa > h3 {
+    padding-bottom: 10px;
+}
+aside.caixa > p {
     text-align: justify;
     margin-bottom: 20px;
     text-indent: 20px;
