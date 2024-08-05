@@ -37,7 +37,7 @@ menu {
     display: block; 
     background-color: white;
     padding: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.315);
 }
 
 menu > ul {
@@ -55,17 +55,17 @@ menu > ul > li > a {
     border-top: 2px solid white;
 }
 
-a.borda_cima{
+menu > ul > li > a:hover {
+    background-color: #EB75C2;
+}
+
+a#borda_cima{
     border-radius: 10px 10px 0px 0px;
     border-top: 0px;
 }
 
-a.borda_baixo{
+a#borda_baixo{
     border-radius: 0px 0px 10px 10px;
-}
-
-menu > ul > li > a:hover {
-    background-color: #EB75C2;
 }
 
 .caixa {
@@ -78,7 +78,7 @@ menu > ul > li > a:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
 }
 
-.caixa > h2 {
+main > h2 {
     text-align: center;
 }
 
@@ -89,53 +89,29 @@ article#cursos {
     background-color: white;
     box-shadow: 0px 0px 0px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-.caixa_flex {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-}
-
-div#python {
-    background-image: url(../imgs/python.png);
-}
-
-div#js {
-    background-image: url(../imgs/javascript_logo.png);
-}
-
-div#java {
-    background-image: url(../imgs/java_logo.png);
-}
-
-div#php {
-    background-image: url(../imgs/php_logo.png);
-}
-
-div#ruby {
-    background-image: url(../imgs/ruby_logo.png);
+article#cursos > div {
+    flex: 1 1 100px;
+    margin: 10px;
     
 }
 
-aside.caixa {
-
+img {
+    max-width: 100%;
+    display: block;
 }
 
-aside.caixa > h2 {
+aside > h2 {
     padding-bottom: 20px;
     text-align: center;
 }
 
-aside.caixa > h3 {
+aside > h3 {
     padding-bottom: 10px;
 }
-aside.caixa > p {
+aside > p {
     text-align: justify;
     margin-bottom: 20px;
     text-indent: 20px;
