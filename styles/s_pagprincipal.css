@@ -86,16 +86,17 @@ main > h2 {
 article#cursos {
     height: 500px;
     width: 90vw;
-    background-color: white;
     box-shadow: 0px 0px 0px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-evenly;
 }
 
 article#cursos > div {
-    flex: 1 1 100px;
+    flex: 0 1 130px;
     margin: 10px;
-    
 }
 
 img {
