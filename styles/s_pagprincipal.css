@@ -82,9 +82,16 @@ main > h2 {
     text-align: center;
 }
 
+main > p {
+    margin-top: 30px;
+    text-indent: 30px;
+    text-align: justify;
+    padding: 0px 10px 10px 10px;
+}
+
 article#cursos {
     height: 800px;
-    width: 90vw;
+    max-width: 750px;
     box-shadow: 0px 0px 0px;
     display: flex;
     flex-wrap: wrap;
@@ -122,6 +129,13 @@ aside > h2 {
     text-align: center;
 }
 
+aside > p {
+    margin-top: 30px;
+    text-indent: 30px;
+    text-align: justify;
+    padding: 0px 10px 10px 10px;
+}
+
 .cards {
     display: flex;
     flex-direction: row;
@@ -130,6 +144,7 @@ aside > h2 {
     margin: 0 auto;
     padding: 40px;
     justify-content: space-around;
+    max-width: 1100px;
 }
 
 .card {
