@@ -6,6 +6,9 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+
+    scroll-behavior: smooth;
+
 }
 
 html, body {
@@ -23,49 +26,30 @@ header > h1 {
     color: white;
 }
 
-span#icone {
-    font-size: 2em;
-    display: block;
-    text-align: center;
-    color: white;
-    padding: 5px;
-    cursor: pointer;
+#icone {
+    display: none;
 }
 
-
-menu {
-    display: block; 
-    background-color: white;
-    padding: 5px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.315);
-}
-
-menu > ul {
+menu ul{
     list-style-type: none;
-    
+    display: flex;
+    justify-content: center;
 }
 
-menu > ul > li > a {
+menu li {
+    margin: 10px;
+}
+
+menu a {
     text-decoration: none;
     color: white;
-    display: block;
-    text-align: center;
-    background-color: #B476EB;
+    font-weight: bold;
+    font-size: 1.2em;
     padding: 10px;
-    border-top: 2px solid white;
 }
 
-menu > ul > li > a:hover {
-    background-color: #EB75C2;
-}
-
-a#borda_cima{
-    border-radius: 10px 10px 0px 0px;
-    border-top: 0px;
-}
-
-a#borda_baixo{
-    border-radius: 0px 0px 10px 10px;
+menu a:hover{
+    text-decoration: underline;
 }
 
 .caixa {
@@ -89,30 +73,29 @@ main > p {
     padding: 0px 10px 10px 10px;
 }
 
-article#cursos {
-    height: 800px;
-    max-width: 750px;
-    box-shadow: 0px 0px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: space-around;
-    justify-content: space-evenly;
-    /*midia query dps*/
+#cursos {
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 }
 
-article#cursos > div {
-    flex: 0 1 170px;
+
+#cursos > div {
     margin: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .foto_curso {
-    max-width: 100%;
-    display: block;
+    width: 200px;
+    height: 200px;
     padding: 10px;
 }
+
 
 aside {
     width: 95vw;
@@ -144,15 +127,14 @@ aside > p {
     margin: 0 auto;
     padding: 40px;
     justify-content: space-around;
-    max-width: 1100px;
 }
 
 .card {
-    max-width: 370px;
+    max-width: 360px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 0px 10px 30px 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
     padding: 30px;
     border-radius: 40px;
@@ -192,4 +174,115 @@ footer > a {
 
 footer > a:hover {
     text-decoration: underline;
+}
+
+/* Consultas de mídia para telas menores */
+
+@media (max-width: 978px) {
+
+    article#cursos {
+        grid-template-columns: repeat(3, 1fr); /* 2 colunas em telas menores */
+    }
+
+}
+
+@media (max-width: 768px) { /* Celulares e Tablets */
+
+    article#cursos > div {
+        margin: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    article#cursos {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+    }
+
+    span#icone {
+        font-size: 2em;
+        display: block;
+        text-align: center;
+        color: white;
+        padding: 5px;
+        cursor: pointer;
+    }
+    
+    
+    menu {
+        display: block; 
+        background-color: white;
+        padding: 5px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.315);
+    }
+    
+    menu > ul {
+        list-style-type: none;
+        display: block;
+    }
+    
+    menu li {
+        margin: 0px;
+    }
+    
+    menu > ul > li > a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        text-align: center;
+        background-color: #B476EB;
+        padding: 10px;
+        border-top: 2px solid white;
+        font-weight: normal;
+        font-size: 1em;
+    }
+    
+    menu > ul > li > a:hover {
+        background-color: #EB75C2;
+        text-decoration: none;
+    }
+    
+    a#borda_cima{
+        border-radius: 10px 10px 0px 0px;
+        border-top: 0px;
+    }
+    
+    a#borda_baixo{
+        border-radius: 0px 0px 10px 10px;
+    }
+
+}
+
+@media (max-width: 480px) { /* Celulares muitos pequenos */
+
+    .foto_curso {
+        height: 200px;
+        width: 200px;
+        padding: 10px;
+    }
+
+    article#cursos > div {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+        border-radius: 10px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    article#cursos {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+    }
+
+
+
+    /* Typical Device Breakpoints
+    ------------------------------
+    Pequenas telas: até 600px
+    Celular: de 600px até 768px
+    Tablet: 768px até 992px
+    Desktop: 992px até 1200px
+    Grandes telas: acima de 1200px
+    */
+
 }
