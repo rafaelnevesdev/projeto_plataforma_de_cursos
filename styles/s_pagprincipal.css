@@ -21,6 +21,7 @@ header {
 
 header > h1 {
     padding: 10px;
+
     text-align: center;
     color: white;
 }
@@ -33,6 +34,7 @@ header > h1 {
 
 menu ul{
     list-style-type: none;
+    
     display: flex;
     justify-content: center;
 }
@@ -42,11 +44,12 @@ menu li {
 }
 
 menu a {
+    padding: 10px;
+
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 1.2em;
-    padding: 10px;
 }
 
 menu a:hover{
@@ -54,10 +57,7 @@ menu a:hover{
 }
 
 main {
-    margin: 20px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
-    border-radius: 10px;
 }
 
 main > h2 {
@@ -66,14 +66,16 @@ main > h2 {
 
 main > p {
     margin-top: 30px;
+    padding: 0px 10px 10px 10px;
+
     text-indent: 30px;
     text-align: justify;
-    padding: 0px 10px 10px 10px;
 }
 
 #cursos {
     padding: 10px;
     border-radius: 10px;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
@@ -94,12 +96,16 @@ main > p {
     padding: 10px;
 }
 
+.cor {
+    background-color: #7583EB;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+}
 
 aside { /*arrumar os asides e pensar em uma forma de não usar muita sombra*/
-    margin: 10px 0px 30px 0px;
+    margin: 10px 0px 20px 0px;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
 }
 
 aside > h2 {
@@ -109,36 +115,42 @@ aside > h2 {
 
 aside > p {
     margin-top: 30px;
+    padding: 0px 10px 10px 10px;
+    
     text-indent: 30px;
     text-align: justify;
-    padding: 0px 10px 10px 10px;
 }
 
 .cards {
+    max-width: 90vw;
+    margin: 0 auto;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 90vw;
-    margin: 0 auto;
     justify-content: space-around;
 }
 
 .card {
     width: 380px;
+    margin: 0px 10px 30px 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+    border-radius: 40px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 10px 30px 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
-    padding: 30px;
-    border-radius: 40px;
+
+    background-color: white;
+    color: black;
 }
 
 .card .user {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
     margin-bottom: 15px;
+    border-radius: 50%;
 }
 
 .card h3 {
@@ -150,14 +162,15 @@ aside > p {
 }
 
 .card p {
-    text-align: center;
     margin-top: 20px;
+    text-align: center;
 }
 
 footer {
+    padding: 5px;
+
     text-align: center;
     background-color: #B476EB;
-    padding: 5px;
     color: white;
 }
 
@@ -183,19 +196,19 @@ footer > a:hover {
 @media (max-width: 768px) { /* Celulares e Tablets */
 
     span#icone {
-        font-size: 2em;
+        padding: 5px;
         display: block;
+        font-size: 2em;
         text-align: center;
         color: white;
-        padding: 5px;
         cursor: pointer;
     }
     
     menu {
         display: block; 
-        background-color: white;
         padding: 5px;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.315);
+        background-color: white;
+        /*box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.315);*/
     }
     
     menu > ul {
