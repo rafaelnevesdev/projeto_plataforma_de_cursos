@@ -62,10 +62,10 @@ main {
 
 main > h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 main > p {
-    margin-top: 30px;
     padding: 0px 10px 10px 10px;
 
     text-indent: 30px;
@@ -74,7 +74,6 @@ main > p {
 
 #cursos {
     padding: 10px;
-    border-radius: 10px;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -96,35 +95,43 @@ main > p {
     padding: 10px;
 }
 
-.cor {
+.curso {
+    margin: 10px 0px;
+    padding: 20px;
+
     background-color: #7583EB;
     color: white;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
 }
 
-aside { /*arrumar os asides e pensar em uma forma de não usar muita sombra*/
-    margin: 10px 0px 20px 0px;
+.curso > h2 {
+    margin-bottom: 10px;
+}
+
+.curso > p {
+    font-size: 1.1em;
+    margin: 0px;
+}
+
+aside { /*aside das avaliações / todos os asides têm id*/
     padding: 10px;
     border-radius: 10px;
 }
 
 aside > h2 {
-    margin-bottom: 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 aside > p {
-    margin-top: 30px;
-    padding: 0px 10px 10px 10px;
-    
-    text-indent: 30px;
-    text-align: justify;
+    margin-top: 20px;
 }
 
 .cards {
     max-width: 90vw;
     margin: 0 auto;
-
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -137,18 +144,17 @@ aside > p {
     padding: 30px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
     border-radius: 40px;
-
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
     background-color: white;
     color: black;
 }
 
 .card .user {
     width: 100px;
-    height: 100px;
     margin-bottom: 15px;
     border-radius: 50%;
 }
@@ -166,9 +172,27 @@ aside > p {
     text-align: center;
 }
 
+#sobre {
+    background-color: #7583EB;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+    margin: 10px 0px;
+    padding: 20px;
+}
+
+#sobre > h2 {
+    margin-bottom: 10px;
+}
+
+#sobre > p {
+    margin: 0px;
+    text-indent: 30px;
+    text-align: justify;
+}
+
 footer {
     padding: 5px;
-
+    
     text-align: center;
     background-color: #B476EB;
     color: white;
@@ -186,7 +210,7 @@ footer > a:hover {
 /* Consultas de mídia para telas menores */
 
 @media (max-width: 978px) {
-
+    
     #cursos {
         grid-template-columns: repeat(3, 1fr); /* 2 colunas em telas menores */
     }
@@ -221,15 +245,15 @@ footer > a:hover {
     }
     
     menu > ul > li > a {
-        text-decoration: none;
         color: white;
-        display: block;
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: normal;
         text-align: center;
         background-color: #B476EB;
-        padding: 10px;
         border-top: 2px solid white;
-        font-weight: normal;
-        font-size: 1em;
+        padding: 10px;
+        display: block;
     }
     
     menu > ul > li > a:hover {
@@ -277,7 +301,6 @@ footer > a:hover {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
         border-radius: 10px;
         display: flex;
-        align-content: center;
         justify-content: center;
     }
 
