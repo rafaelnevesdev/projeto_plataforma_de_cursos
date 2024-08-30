@@ -17,6 +17,7 @@ html, body {
 
 header {
     background-image: linear-gradient(to left, #DA75EB, #7583EB);
+    padding: 10px;
 }
 
 header > h1 {
@@ -57,7 +58,8 @@ menu a:hover{
 }
 
 main {
-    padding: 20px;
+    margin-top: 20px;
+    padding: 0px 20px;
 }
 
 main > h2 {
@@ -95,7 +97,7 @@ main > p {
     padding: 10px;
 }
 
-.curso {
+.curso { /*ideia futura: colocar os nomes das respectivas linguagens*/
     margin: 10px 0px;
     padding: 20px;
 
@@ -218,6 +220,10 @@ footer > a:hover {
 }
 
 @media (max-width: 768px) { /* Celulares e Tablets */
+
+    header {
+        padding: 0px;
+    }
 
     span#icone {
         padding: 5px;
