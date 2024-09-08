@@ -3,341 +3,139 @@
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    padding: 0px;
     margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-
-    scroll-behavior: smooth;
-
 }
 
-html, body {
-    background-color: white;
-}
-
-header {
-    background-image: linear-gradient(to left, #DA75EB, #7583EB);
-    padding: 10px;
-}
-
-header > h1 {
-    padding: 10px;
-
-    text-align: center;
-    color: white;
-}
-
-#icone {
-    display: none;
-}
-
-
-
-menu ul{
-    list-style-type: none;
-    
-    display: flex;
-    justify-content: center;
-}
-
-menu li {
-    margin: 10px;
-}
-
-menu a {
-    padding: 10px;
-
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-menu a:hover{
-    text-decoration: underline;
+body, html {
+    background-color: #8D75EB;
+    height: 100vh;
+    width: 100vw;
 }
 
 main {
-    margin-top: 20px;
-    padding: 0px 20px;
+    height: 100vh;
+    width: 100vw;
+
+    position: relative;
 }
 
-main > h2 {
-    text-align: center;
-    margin-bottom: 20px;
+#login {
+    background-color: white;
+    border-radius: 20px;
+    height: 375px;
+    width: 90vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: width .2s, heigth .2s;
+    transition-timing-function: ease;
 }
 
-main > p {
-    padding: 0px 10px 10px 10px;
-
-    text-indent: 30px;
-    text-align: justify;
-}
-
-#cursos {
+#login > #formulario {
+    display: block;
     padding: 10px;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
 }
 
+#formulario > h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
 
-#cursos > div {
-    margin: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+#formulario > p {
+   font-size: 1em;
+   margin-bottom: 20px;
+}
+
+.campo {
+    background-color: #7583EB;
+    border: 2px solid #7583EB;
     border-radius: 10px;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0px;
+}
+
+.campo > label {
+    display: none;
+}
+
+.campo > span {
+    font-size: 2em;
+    color: white;
+    width: 40px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-.foto_curso {/*teste para icones ao invés de fotos*/
-    color: #7583EB;
-    text-decoration: none;
-    font-size: 9em;
-    padding-top: 18px;
+.campo > input {
+    font-size: 1em;
+    width: calc(92% + 13px);
+    height: 100%;
+    border: 0px;
+    border-radius: 10px;
+    padding: 4px;
 }
 
-#js {
-    border: 5px solid #7583EB;
-    border-radius: 20px;
-}
-
-#js i {
-    width: 150px;
-    height: 150px;
+form > input[type=submit] {
     display: block;
-}
-
-
-.curso { /*ideia futura: colocar os nomes das respectivas linguagens*/
-    margin: 10px 0px;
-    padding: 20px;
-
-    background-color: #7583EB;
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
-}
-
-.curso > h2 {
-    margin-bottom: 10px;
-}
-
-.curso > p {
-    font-size: 1.1em;
-    margin: 0px;
-}
-
-aside { /*aside das avaliações / todos os outros asides têm id*/
-    padding: 10px;
-    border-radius: 10px;
-}
-
-aside > h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-aside > p {
-    margin-top: 20px;
-}
-
-.cards {
-    max-width: 90vw;
-    margin: 0 auto;
-    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.card {
-    width: 380px;
-    margin: 0px 10px 30px 10px;
-    padding: 30px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
-    border-radius: 40px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    background-color: white;
-    color: black;
-}
-
-.card .user {
-    width: 100px;
-    margin-bottom: 15px;
-    border-radius: 50%;
-}
-
-.card h3 {
-    margin-bottom: 5px;
-}
-
-.star {
-    width: 20px;
-}
-
-.card p {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#sobre {
-    background-color: #7583EB;
-    color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
-    margin: 10px 0px;
-    padding: 20px;
-}
-
-#sobre > h2 {
-    margin-bottom: 10px;
-}
-
-#sobre > p {
-    margin: 0px;
-    text-indent: 30px;
-    text-align: justify;
-}
-
-#contatos {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
-    margin: 20px 0px;
-    padding: 20px;
-}
-
-#contatos h2 {
-    margin-bottom: 10px;
-}
-
-#contatos a {
-    color: black;
-    text-decoration: none;
-    font-size: 3em;
-    margin-left: 5px;
-}
-
-footer {
-    padding: 5px;
-    
-    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
     background-color: #B476EB;
     color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-footer > a {
+form > input[type=submit]:hover {
+    background-color: #EB75C2;
+}
+
+
+form > .botao {
+    display: block;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    padding-top: 8px;
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid #EB75C2;
+    border-radius: 10px;
+    color: #EB75C2;
     text-decoration: none;
+
+}
+
+form > .botao:hover {
     color: white;
+    background-color: #EB75C2;
 }
 
-footer > a:hover {
+#login > p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1em;
+}
+
+#login > p > a {
+    text-decoration: none;
+    color: #EB75C2;
+}
+
+#login > p > a:hover {
     text-decoration: underline;
-}
-
-/* Consultas de mídia para telas menores */
-
-@media (max-width: 978px) {
-    
-    #cursos {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas maiores */
-    }
-
-}
-
-@media (max-width: 768px) { /* Celulares e Tablets */
-
-    header {
-        padding: 0px;
-    }
-
-    span#icone {
-        padding: 5px;
-        display: block;
-        font-size: 2em;
-        text-align: center;
-        color: white;
-        cursor: pointer;
-    }
-    
-    menu {
-        display: block; 
-        padding: 5px;
-        background-color: white;
-    }
-    
-    menu > ul {
-        list-style-type: none;
-        display: block;
-    }
-    
-    menu li {
-        margin: 0px;
-    }
-    
-    menu > ul > li > a {
-        color: white;
-        text-decoration: none;
-        font-size: 1em;
-        font-weight: normal;
-        text-align: center;
-        background-color: #B476EB;
-        border-top: 2px solid white;
-        padding: 10px;
-        display: block;
-    }
-    
-    menu > ul > li > a:hover {
-        background-color: #EB75C2;
-        text-decoration: none;
-    }
-    
-    a#borda_cima{
-        border-radius: 10px 10px 0px 0px;
-        border-top: 0px;
-    }
-    
-    a#borda_baixo{
-        border-radius: 0px 0px 10px 10px;
-    }
-
-    main {
-        margin: 10px 0px 0px 0px;
-        border-radius: 10px
-    }
-
-    #cursos {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
-    }
-
-}
-
-@media (max-width: 480px) { /* Celulares muitos pequenos */
-
-    #cursos > div {
-        height: 209px;
-    }
-
-    #cursos {
-        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
-    }
-
-    #contatos a {
-        font-size: 2.5em;
-    }
-
-    /* Typical Device Breakpoints
-    ------------------------------
-    Pequenas telas: até 600px
-    Celular: de 600px até 768px
-    Tablet: 768px até 992px
-    Desktop: 992px até 1200px
-    Grandes telas: acima de 1200px
-    */
 }
